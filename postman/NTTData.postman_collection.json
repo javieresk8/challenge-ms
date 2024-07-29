@@ -1,0 +1,1104 @@
+{
+	"info": {
+		"_postman_id": "6ec54bf0-3352-48f7-a002-7eaaa24b5995",
+		"name": "NTTData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19314925"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Nuevo Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Javier\",\n    \"genero\": \"M\",\n    \"edad\": 12,\n    \"identificacion\": \"1755041595\",\n    \"direccion\": \"El inca y alamos\",\n    \"telefono\": \"5143126\",\n    \"clienteId\": 123123123,\n    \"contrasena\": \"testpassporencriptar\",\n    \"estado\": \"A\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}clientes",
+							"host": [
+								"{{host}}clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Javier\",\n    \"genero\": \"M\",\n    \"edad\": 12,\n    \"identificacion\": \"1755041595\",\n    \"direccion\": \"El inca y alamos\",\n    \"telefono\": \"5143126\",\n    \"clienteId\": 123123123,\n    \"contrasena\": \"testpassporencriptar\",\n    \"estado\": \"A\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}clientes",
+									"host": [
+										"{{host}}clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 15:41:09 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombre\": \"Javier Erazo\"\n    // \"genero\": \"M\",\n    // \"edad\": 12,\n    // \"identificacion\": \"1755041595\",\n    // \"direccion\": \"El inca y alamos\",\n    // \"telefono\": \"5143126\",\n    // \"clienteId\": 123123123,\n    // \"contrasena\": \"testpassporencriptar\",\n    // \"estado\": \"A\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}clientes/1",
+							"host": [
+								"{{host}}clientes"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombre\": \"Javier Erazo B.\"\n    // \"genero\": \"M\",\n    // \"edad\": 12,\n    // \"identificacion\": \"1755041595\",\n    // \"direccion\": \"El inca y alamos\",\n    // \"telefono\": \"5143126\",\n    // \"clienteId\": 123123123,\n    // \"contrasena\": \"testpassporencriptar\",\n    // \"estado\": \"A\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}clientes/3",
+									"host": [
+										"{{host}}clientes"
+									],
+									"path": [
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 16:26:30 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nombre\": \"Javier Erazo B.\",\n    \"genero\": \"M\",\n    \"edad\": 12,\n    \"identificacion\": \"1755041595\",\n    \"direccion\": \"El inca y alamos\",\n    \"telefono\": \"5143126\",\n    \"clienteId\": 123123123,\n    \"contrasena\": \"testpassporencriptar\",\n    \"estado\": \"A\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Hard delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host-users}}clientes/1",
+							"host": [
+								"{{host-users}}clientes"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}clientes/1",
+									"host": [
+										"{{host}}clientes"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 15:53:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host-users}}clientes/3",
+							"host": [
+								"{{host-users}}clientes"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}clientes/3",
+									"host": [
+										"{{host}}clientes"
+									],
+									"path": [
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 16:23:17 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"nombre\": \"Javier\",\n    \"genero\": \"M\",\n    \"edad\": 12,\n    \"identificacion\": \"1755041595\",\n    \"direccion\": \"El inca y alamos\",\n    \"telefono\": \"5143126\",\n    \"clienteId\": 123123123,\n    \"contrasena\": \"testpassporencriptar\",\n    \"estado\": \"A\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cuenta",
+			"item": [
+				{
+					"name": "Nueva Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroCuenta\": \"1212222\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 100.99,\n    \"estadoCuenta\": \"ACTIVA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}cuentas",
+							"host": [
+								"{{host}}cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"numeroCuenta\": \"1212222\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 100.99,\n    \"estadoCuenta\": \"ACTIVA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}cuentas",
+									"host": [
+										"{{host}}cuentas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 20:01:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    // \"numeroCuenta\": \"1212222\",\n    // \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 10.99\n    //\"estadoCuenta\": \"ACTIVA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}cuentas/1",
+							"host": [
+								"{{host}}cuentas"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"numeroCuenta\": \"1212222\",\n    // \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 10.99\n    //\"estadoCuenta\": \"ACTIVA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}cuentas/1",
+									"host": [
+										"{{host}}cuentas"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 20:02:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"numeroCuenta\": \"1212222\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 10.99,\n    \"estadoCuenta\": \"ACTIVA\",\n    \"movimientos\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Hard delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}cuentas/1",
+							"host": [
+								"{{host}}cuentas"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}clientes/1",
+									"host": [
+										"{{host}}clientes"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 15:53:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}clientes/3",
+							"host": [
+								"{{host}}clientes"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}cuentas/2",
+									"host": [
+										"{{host}}cuentas"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 20:04:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"numeroCuenta\": \"1212222\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 100.99,\n    \"estadoCuenta\": \"ACTIVA\",\n    \"movimientos\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Movimiento",
+			"item": [
+				{
+					"name": "Nuevo movimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"numeroCuenta\": \"1212222\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 100.99,\n    \"estadoCuenta\": \"ACTIVA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}cuentas",
+							"host": [
+								"{{host}}cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"numeroCuenta\": \"1212222\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 100.99,\n    \"estadoCuenta\": \"ACTIVA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}cuentas",
+									"host": [
+										"{{host}}cuentas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 20:01:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "nonzero",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fecha\": \"2024-07-25T12:12:12.212\",\n    \"valor\": 0.00,\n    \"saldo\": 99.99,\n    \"cuentaId\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}movimientos",
+									"host": [
+										"{{host}}movimientos"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 21:17:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-07-28T21:17:12.153+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<java.lang.Void> com.javier.acount_service.api.controllers.MovimientoController.createMovimiento(com.javier.acount_service.application.dto.movimiento.CreateMovimientoRequestDto): [Field error in object 'createMovimientoRequestDto' on field 'valor': rejected value [0.0]; codes [NonZero.createMovimientoRequestDto.valor,NonZero.valor,NonZero]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createMovimientoRequestDto.valor,valor]; arguments []; default message [valor]]; default message [The value must be greater than zero]] \\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:144)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\\n\\tat java.base/java.lang.Thread.run(Thread.java:840)\\n\",\n    \"message\": \"Validation failed for object='createMovimientoRequestDto'. Error count: 1\",\n    \"errors\": [\n        {\n            \"codes\": [\n                \"NonZero.createMovimientoRequestDto.valor\",\n                \"NonZero.valor\",\n                \"NonZero\"\n            ],\n            \"arguments\": [\n                {\n                    \"codes\": [\n                        \"createMovimientoRequestDto.valor\",\n                        \"valor\"\n                    ],\n                    \"arguments\": null,\n                    \"defaultMessage\": \"valor\",\n                    \"code\": \"valor\"\n                }\n            ],\n            \"defaultMessage\": \"The value must be greater than zero\",\n            \"objectName\": \"createMovimientoRequestDto\",\n            \"field\": \"valor\",\n            \"rejectedValue\": 0,\n            \"bindingFailure\": false,\n            \"code\": \"NonZero\"\n        }\n    ],\n    \"path\": \"/movimientos\"\n}"
+						},
+						{
+							"name": "suma saldo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fecha\": \"2024-07-25T12:12:12.212\",\n    \"valor\": 2.00,\n    \"cuentaId\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}movimientos",
+									"host": [
+										"{{host}}movimientos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 21:58:07 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "not enough saldo",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fecha\": \"2024-07-25T12:12:12.212\",\n    \"valor\": -33332.00,\n    \"cuentaId\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}movimientos",
+									"host": [
+										"{{host}}movimientos"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 22:59:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"La cuenta no tiene saldo suficiente\",\n    \"code\": 400\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    // \"numeroCuenta\": \"1212222\",\n    // \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 10.99\n    //\"estadoCuenta\": \"ACTIVA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}cuentas/1",
+							"host": [
+								"{{host}}cuentas"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    // \"numeroCuenta\": \"1212222\",\n    // \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 10.99\n    //\"estadoCuenta\": \"ACTIVA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}cuentas/1",
+									"host": [
+										"{{host}}cuentas"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 20:02:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"numeroCuenta\": \"1212222\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 10.99,\n    \"estadoCuenta\": \"ACTIVA\",\n    \"movimientos\": []\n}"
+						},
+						{
+							"name": "nonzero",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fecha\": \"2022-07-25T12:12:12.212\",\n    \"valor\": 0\n    // \"saldo\": 99.99,\n    // \"cuentaId\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}movimientos/1",
+									"host": [
+										"{{host}}movimientos"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 21:18:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-07-28T21:18:37.761+00:00\",\n    \"status\": 400,\n    \"error\": \"Bad Request\",\n    \"trace\": \"org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<java.util.Optional<com.javier.acount_service.domain.entities.Movimiento>> com.javier.acount_service.api.controllers.MovimientoController.updateMovimiento(java.lang.Long,com.javier.acount_service.application.dto.movimiento.UpdateMovimientoRequestDto): [Field error in object 'updateMovimientoRequestDto' on field 'valor': rejected value [0.0]; codes [NonZero.updateMovimientoRequestDto.valor,NonZero.valor,NonZero.java.lang.Double,NonZero]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [updateMovimientoRequestDto.valor,valor]; arguments []; default message [valor]]; default message [The value must be greater than zero]] \\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:144)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925)\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\\n\\tat java.base/java.lang.Thread.run(Thread.java:840)\\n\",\n    \"message\": \"Validation failed for object='updateMovimientoRequestDto'. Error count: 1\",\n    \"errors\": [\n        {\n            \"codes\": [\n                \"NonZero.updateMovimientoRequestDto.valor\",\n                \"NonZero.valor\",\n                \"NonZero.java.lang.Double\",\n                \"NonZero\"\n            ],\n            \"arguments\": [\n                {\n                    \"codes\": [\n                        \"updateMovimientoRequestDto.valor\",\n                        \"valor\"\n                    ],\n                    \"arguments\": null,\n                    \"defaultMessage\": \"valor\",\n                    \"code\": \"valor\"\n                }\n            ],\n            \"defaultMessage\": \"The value must be greater than zero\",\n            \"objectName\": \"updateMovimientoRequestDto\",\n            \"field\": \"valor\",\n            \"rejectedValue\": 0,\n            \"bindingFailure\": false,\n            \"code\": \"NonZero\"\n        }\n    ],\n    \"path\": \"/movimientos/1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Hard delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}cuentas/1",
+							"host": [
+								"{{host}}cuentas"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}clientes/1",
+									"host": [
+										"{{host}}clientes"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 15:53:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}movimientos/3",
+							"host": [
+								"{{host}}movimientos"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}cuentas/2",
+									"host": [
+										"{{host}}cuentas"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Jul 2024 20:04:50 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"numeroCuenta\": \"1212222\",\n    \"tipoCuenta\": \"AHORRO\",\n    \"saldoInicial\": 100.99,\n    \"estadoCuenta\": \"ACTIVA\",\n    \"movimientos\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Reportes",
+			"item": [
+				{
+					"name": "Status Account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountId\": 2,\n    \"clientId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}reportes?from=2022-07-24&to=2024-07-24",
+							"host": [
+								"{{host}}reportes"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2022-07-24"
+								},
+								{
+									"key": "to",
+									"value": "2024-07-24"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ok",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"accountId\": 2,\n    \"clientId\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host-account}}reportes?from=2022-07-24&to=2024-07-24",
+									"host": [
+										"{{host-account}}reportes"
+									],
+									"query": [
+										{
+											"key": "from",
+											"value": "2022-07-24"
+										},
+										{
+											"key": "to",
+											"value": "2024-07-24"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Jul 2024 05:09:51 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"identification\": \"1755041595\",\n    \"name\": \"JAvier Erazo\",\n    \"numeroCuenta\": \"1212222\",\n    \"saldo\": 122.99,\n    \"movimientos\": [\n        {\n            \"id\": 1,\n            \"fecha\": \"2022-07-25T12:12:12.212\",\n            \"saldo\": 102.99,\n            \"valor\": 1\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
